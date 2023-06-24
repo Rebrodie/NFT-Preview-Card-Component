@@ -1,0 +1,153 @@
+/* 
+//---------------//
+//GENERAL STYLES//
+//-------------//
+*/
+
+:root {
+	--Soft-blue: hsl(215, 51%, 70%); /*Primary*/
+	--Cyan: hsl(178, 100%, 50%); /*Primary*/
+	--Cyan2: hsla(178, 100%, 50%, 0.2); /*Primary*/
+	--background: hsl(217, 54%, 11%); /*Background*/
+	--card: hsl(216, 50%, 16%); /*Card-Background*/
+	--line: hsl(215, 32%, 27%); /*Line*/
+	--White: hsl(0, 0%, 100%); /*Netral*/
+}
+* {
+	font-family: "Outfit";
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	background: var(--background);
+	min-height: 100vh;
+	overflow: hidden;
+}
+.wrapper,
+.card,
+.card > *,
+.card-preview__icon,
+.card-body > *,
+.card-status > * {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.wrapper {
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+
+/* 
+//-----------------//
+//COMPONENTS STYLE//
+//---------------//
+*/
+
+.card {
+	flex-direction: column;
+	gap: 1.8rem;
+	background: var(--card);
+	width: 300px;
+	border-radius: 15px;
+	padding: 2.4rem;
+	min-height: 400px;
+	box-shadow: 0 25px 15px 15px rgba(0, 0, 0, 0.15);
+}
+.card-preview {
+	flex-direction: column;
+	width: 100%;
+	min-height: 250px;
+	border-radius: 10px;
+    background-image: url(/images/image-equilibrium.jpg);
+	background-size: cover;
+}
+.card-preview__icon {
+	width: 100%;
+    min-height: 250px;
+    border-radius: 10px;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 250ms ease-in-out;
+}
+.card-body {
+	flex-direction: column;
+	align-items: start;
+	gap: 2rem;
+}
+.card-heading h1 {
+	color: var(--White);
+    text-align: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+.card-paragraph {
+	font-size: 1.6rem;
+	font-weight: 300;
+	color: var(--Soft-blue);
+}
+.card-status {
+	justify-content: space-between;
+	border-bottom: 1px solid var(--line);
+	width: 100%;
+	min-height: 2rem;
+	padding: 1rem 0;
+}
+.card-status > * {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+.card-status__price {
+	gap: 1rem;
+	color: var(--Cyan);
+}
+.card-status__time {
+	color: var(--Soft-blue);
+	gap: 0.5rem;
+}
+.card-footer {
+	color: var(--Soft-blue);
+	gap: 1.2rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+.card-footer p span {
+	color: var(--White);
+	margin-left: 2px;
+}
+.card-footer img {
+	width: 35px;
+	height: 35px;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* 
+//--------------//
+//HOVER EFFECTS//
+//------------//
+*/
+
+.card-heading h1:hover,
+.card-footer p span:hover {
+	color: var(--Cyan);
+	cursor: pointer;
+}
+.card-preview:hover {
+	cursor: pointer;
+}
+.card-preview:hover .card-preview__icon {
+	opacity: 1;
+	background:  linear-gradient(to bottom right, rgba(0,255,247,0.5), rgba(0,255,247,0.6));
+}
