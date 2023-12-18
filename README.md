@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: 
-- Live Site URL: 
+- Live Site URL: https://rebrodie.github.io/NFT-Preview-Card-Component/
 ### Built with
 
 - Semantic HTML5 markup
